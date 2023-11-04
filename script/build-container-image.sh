@@ -3,10 +3,10 @@
 set -e
 
 mkdir rootfs
+losetup -a
 mount -t iso9660 -o loop vyos-rolling-latest.iso rootfs/
 
 mkdir unsquashfs
-losetup -a
 unsquashfs -f -d unsquashfs/ rootfs/live/filesystem.squashfs
 
 sed -i 's/^LANG=.*$/LANG=C.UTF-8/' unsquashfs/etc/default/locale
