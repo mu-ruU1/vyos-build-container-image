@@ -2,13 +2,13 @@
 
 set -e
 
-mkdir rootfs
+mkdir /mnt/rootfs
 losetup -f vyos-rolling-latest.iso
 mount_point=$(losetup -j vyos-rolling-latest.iso | cut -d : -f 1)
-mount -t iso9660 $mount_point rootfs/
+mount -t iso9660 $mount_point /mnt/rootfs
 
 mkdir unsquashfs
-unsquashfs -f -d unsquashfs/ rootfs/live/filesystem.squashfs
+unsquashfs -f -d unsquashfs/ /mnt/rootfs/live/filesystem.squashfs
 
 sed -i 's/^LANG=.*$/LANG=C.UTF-8/' unsquashfs/etc/default/locale
 
