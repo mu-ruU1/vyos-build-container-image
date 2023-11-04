@@ -33,7 +33,7 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           repository: ${{ secrets.DOCKER_REPOSITORY }}
         run: |
-          tar -C unsquashfs -c . | docker import - $username/$repository:${{ env.tag_name }} --change 'CMD ["/sbin/init"]'
+          sudo tar -C unsquashfs -c . | docker import - $username/$repository:${{ env.tag_name }} --change 'CMD ["/sbin/init"]'
 
       - name: Push Container Image to Docker Hub
         env:
