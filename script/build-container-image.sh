@@ -4,7 +4,8 @@ set -e
 
 mkdir rootfs
 losetup -f vyos-rolling-latest.iso
-mount -t iso9660 -o loop vyos-rolling-latest.iso rootfs/
+mount_point=$(losetup -j vyos-rolling-latest.iso | cut -d : -f 1)
+mount -t iso9660 $mount_point rootfs/
 
 mkdir unsquashfs
 unsquashfs -f -d unsquashfs/ rootfs/live/filesystem.squashfs
