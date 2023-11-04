@@ -3,7 +3,7 @@
 set -e
 
 mkdir rootfs
-losetup -a
+losetup -f vyos-rolling-latest.iso
 mount -t iso9660 -o loop vyos-rolling-latest.iso rootfs/
 
 mkdir unsquashfs
