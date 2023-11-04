@@ -15,7 +15,7 @@ jobs:
       - name: Download VyOS ISO
         run: |
           chmod +x ./script/download-vyos-latest-image.sh
-          ./script/download-vyos-latest-image.sh
+          sudo ./script/download-vyos-latest-image.sh
 
       - name: Build Container Image
         run: |
