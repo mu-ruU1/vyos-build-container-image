@@ -1,6 +1,6 @@
 # vyos-build-container-image
 
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/mu-ruU1/vyos-build-container-image/vyos-build-container-image.yaml?style=for-the-badge&logo=github&link=https%3A%2F%2Fgithub.com%2Fmu-ruU1%2Fvyos-build-container-image%2Factions)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/mu-ruU1/vyos-build-container-image/vyos-build-container-image.yaml?style=for-the-badge&logo=github)
 ![Docker Pulls](https://img.shields.io/docker/pulls/muruu1/vyos?style=for-the-badge&logo=docker)
 ![Docker Image Version (latest semver)](https://img.shields.io/docker/v/muruu1/vyos?style=for-the-badge&logo=docker)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/muruu1/vyos/latest?style=for-the-badge&logo=docker)
