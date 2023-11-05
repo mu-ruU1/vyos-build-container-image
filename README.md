@@ -21,7 +21,9 @@
 
 ![sample-lab](./image/sample-lab.png)
 
-### make topology file
+### Make topology file
+
+sample-topology.yaml
 
 ```yaml=sample-topology.yaml
 name: sample-lab
@@ -56,7 +58,7 @@ topology:
     - endpoints: ["vyos01:eth3", "ubuntu01:eth1"]
 ```
 
-### deploy a lab
+### Deploy a lab
 
 ```
 sudo clab deploy -t sample-topology.yaml
