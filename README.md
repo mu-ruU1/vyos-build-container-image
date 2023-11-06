@@ -10,6 +10,16 @@
 - [Containerlab](https://containerlab.dev/)
 - [How to deploy VyOS in Containerlab](https://docs.google.com/document/d/1TUUVGLzetAX7_BIO6qtKDCC89j40eHa7bZrGiM5a3j8/edit?usp=sharing)
 
+## What's this image?
+
+This image is a unofficial container image for VyOS.  
+This image is based on [vyos/vyos-rolling-nightly-builds](https://github.com/vyos/vyos-rolling-nightly-builds/releases).  
+Check [GitHub Actions](https://github.com/mu-ruU1/vyos-build-container-image/actions) for build status.
+
+### Points of attention
+
+- Enable SSH
+
 ## How to use this image
 
 - Install Docker and Containerlab
