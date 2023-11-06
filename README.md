@@ -20,7 +20,7 @@
 
 ## Sample Lab
 
-![sample-lab](./image/sample-lab.png)
+![sample-lab](./docs/image/sample-lab.png)
 
 ### Make topology file
 
