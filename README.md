@@ -18,6 +18,9 @@ Check [GitHub Actions](https://github.com/mu-ruU1/vyos-build-container-image/act
 
 ### Points of attention
 
+- Default User
+  - username: `vyos`
+  - password: `vyos`
 - Enable SSH
 
 ## How to use this image
@@ -76,6 +79,14 @@ sudo clab deploy -t sample-topology.yaml
 ```
 
 ### Connecting to the nodes
+
+#### ssh
+
+```bash
+ssh vyos@clab-sample-lab-vyos01
+```
+
+#### docker exec
 
 ```bash
 docker exec -it clab-sample-lab-vyos01 su vyos
