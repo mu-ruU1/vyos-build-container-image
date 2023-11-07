@@ -11,3 +11,7 @@ set system host-name $hostname
 set service ssh
 commit
 exit
+
+chown -R vyos:vyattacfg /config
+chown -R vyos:vyattacfg /opt/vyatta/config
+chown -R vyos:vyattacfg /opt/vyatta/etc/config
