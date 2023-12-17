@@ -26,8 +26,13 @@ RUN apt-get update && apt-get install -y \
   openssh-server \
   ufw \
   && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/* \
+  && echo "root:root" | chpasswd
 
 COPY ./01-sshd.conf /etc/ssh/sshd_config.d/01-sshd.conf
+
+COPY ./entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ./entrypoint.sh /entrypoint.sh
 
 EXPOSE 22
