@@ -69,7 +69,7 @@ topology:
 ### Deploy a lab
 
 ```
-sudo clab dep -t https://github.com/mu-ruU1/vyos-build-container-image/blob/main/clab/sample.clab.yml
+sudo clab dep -t ./clab/sample.clab.yml
 ```
 
 ### Connecting to the nodes
@@ -89,5 +89,5 @@ docker exec -it clab-sample-lab-vyos01 su vyos
 ### Destroy the lab
 
 ```
-sudo clab destroy -t sample-topology.yaml
+sudo clab des -t ./clab/sample.clab.yml
 ```
