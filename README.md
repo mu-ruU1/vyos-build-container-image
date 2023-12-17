@@ -69,7 +69,7 @@ topology:
 ### Deploy a lab
 
 ```
-sudo clab deploy -t https://github.com/mu-ruU1/vyos-build-container-image/clab/sample.clab.yml
+sudo clab dep -t https://github.com/mu-ruU1/vyos-build-container-image/blob/main/clab/sample.clab.yml
 ```
 
 ### Connecting to the nodes
