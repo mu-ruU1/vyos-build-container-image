@@ -27,3 +27,7 @@ RUN apt-get update && apt-get install -y \
   ufw \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
+
+COPY ./01-sshd.conf /etc/ssh/sshd_config.d/01-sshd.conf
+
+EXPOSE 22
