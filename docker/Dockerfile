@@ -33,6 +33,6 @@ COPY ./01-sshd.conf /etc/ssh/sshd_config.d/01-sshd.conf
 
 COPY ./entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ./entrypoint.sh /entrypoint.sh
-
 EXPOSE 22
+
+ENTRYPOINT ./entrypoint.sh /entrypoint.sh
