@@ -1,0 +1,24 @@
+name: sample-lab
+
+topology:
+  nodes:
+    vyos01:
+      kind: linux
+      image: muruu1/vyos:latest
+      cmd: /sbin/init
+    vyos02:
+      kind: linux
+      image: muruu1/vyos:latest
+      cmd: /sbin/init
+    vyos03:
+      kind: linux
+      image: muruu1/vyos:latest
+      cmd: /sbin/init
+    ubuntu01:
+      kind: linux
+      image: muruu1/net-cmd:latest
+  links:
+    - endpoints: ["vyos01:eth1", "vyos02:eth1"]
+    - endpoints: ["vyos02:eth2", "vyos03:eth1"]
+    - endpoints: ["vyos03:eth2", "vyos01:eth2"]
+    - endpoints: ["vyos01:eth3", "ubuntu01:eth1"]

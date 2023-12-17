@@ -48,23 +48,17 @@ topology:
       kind: linux
       image: muruu1/vyos:latest
       cmd: /sbin/init
-      binds:
-        - /lib/modules:/lib/modules
     vyos02:
       kind: linux
       image: muruu1/vyos:latest
       cmd: /sbin/init
-      binds:
-        - /lib/modules:/lib/modules
     vyos03:
       kind: linux
       image: muruu1/vyos:latest
       cmd: /sbin/init
-      binds:
-        - /lib/modules:/lib/modules
     ubuntu01:
       kind: linux
-      image: ubuntu:latest
+      image: muruu1/net-cmd:latest
   links:
     - endpoints: ["vyos01:eth1", "vyos02:eth1"]
     - endpoints: ["vyos02:eth2", "vyos03:eth1"]
@@ -75,7 +69,7 @@ topology:
 ### Deploy a lab
 
 ```
-sudo clab deploy -t sample-topology.yaml
+sudo clab deploy -t https://github.com/mu-ruU1/vyos-build-container-image/clab/sample.clab.yml
 ```
 
 ### Connecting to the nodes
