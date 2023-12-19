@@ -37,9 +37,9 @@ Check [GitHub Actions](https://github.com/mu-ruU1/vyos-build-container-image/act
 
 ### Make topology file
 
-sample-topology.yaml
+[sample-topology.yaml](./clab/sample.clab.yml)
 
-```yaml=sample-topology.yaml
+```yaml=sample.clab.yml
 name: sample-lab
 
 topology:
